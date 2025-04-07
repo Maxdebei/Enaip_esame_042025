@@ -4,6 +4,6 @@ from progetto.modulo2 import processa_dati, leggi_da_file
 
 def test_processa_dati():
       
-      risultato = processa_dati(leggi_da_file("dati/test.json"))
+      risultato = processa_dati(leggi_da_file("dati/test.json")) # popolo risultato con i dati
 
-      assert risultato == [1, 3, 4, 6]
+      assert risultato == [1, 3, 4, 6] 
