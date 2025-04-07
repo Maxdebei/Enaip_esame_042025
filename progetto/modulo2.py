@@ -8,7 +8,12 @@ def leggi_da_file(filepath):
     except FileNotFoundError:
         return None
 
-def processa_dati(dati):
+def processa_dati(dati: list) -> list:
+    lista_risultati = []
+    for diz in dati:
+        if diz["attivo"] == True:
+            lista_risultati.append(diz["id"])
+
     """
     Questa funzione dovrebbe processare una lista di dizionari.
     Implementa la logica per filtrare i dizionari che hanno una chiave 'attivo'
@@ -16,4 +21,8 @@ def processa_dati(dati):
     della chiave 'id' di questi dizionari.
     """
     # TODO: Implementare la logica di processamento dei dati
-    pass
+    return lista_risultati
+
+if __name__ == "__main__":
+    print (leggi_da_file("/home/max/progetti python/Enaip_esame_042025/dati/test.json"))
+
