@@ -2,12 +2,15 @@ import pytest
 from progetto.modulo1 import funzione_doppio, funzione_quadrato, ClasseParzialmenteImplementata
 
 def test_funzione_doppio():
+    x = 2
     # TODO Aggiungere 2 o più test per coprire funzione_doppio
-    pass
+    assert funzione_doppio(x) == 4
+    
 
 def test_funzione_quadrato():
+    y = 3
     # TODO Aggiungere 2 o più test per coprire funzione_quadrato
-    pass
+    assert funzione_quadrato(y) == 9
 
 def test_metodo_esistente_classe():
     istanza = ClasseParzialmenteImplementata("Test")
@@ -15,6 +18,6 @@ def test_metodo_esistente_classe():
 
 def test_metodo_da_completare_classe():
     istanza = ClasseParzialmenteImplementata("Test")
-    istanza.metodo_da_completare(5)
+    istanza.metodo_da_completare("mario")
     # TODO: Aggiungere un'asserzione per verificare il comportamento del metodo
-    pass
+    assert istanza.metodo_da_completare("Mario") == "Test Mario"
