@@ -11,7 +11,7 @@ def test_funzione_quadrato():
     y = 3
     # TODO Aggiungere 2 o più test per coprire funzione_quadrato
     assert funzione_quadrato(y) == 9
-
+import pytest
 def test_metodo_esistente_classe():
     istanza = ClasseParzialmenteImplementata("Test")
     assert istanza.metodo_esistente() == "Ciao, sono Test!"
